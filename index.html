@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hexacode – Agence Web Moderne</title>
+<meta name="description" content="Hexacode est une agence web fondée par deux jeunes entrepreneurs passionnés. Nous codons rapidement des projets simples ou complexes à prix accessible.">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --primary:#6366f1;
+  --secondary:#4f46e5;
+  --text:#0f172a;
+  --muted:#64748b;
+  --radius:18px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter', sans-serif;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:80px 20px;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:28px;
+  font-weight:800;
+  letter-spacing:-1px;
+}
+
+.logo span{
+  color:var(--primary);
+}
+
+nav a{
+  margin-left:32px;
+  text-decoration:none;
+  color:var(--text);
+  font-weight:500;
+  position:relative;
+}
+
+nav a::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:2px;
+  background:var(--primary);
+  transition:.3s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+/* HERO */
+.hero{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:60px;
+  align-items:center;
+  margin-top:60px;
+}
+
+.hero h1{
+  font-size:52px;
+  font-weight:800;
+  line-height:1.1;
+}
+
+.hero h1 span{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  margin-top:20px;
+  font-size:18px;
+  color:var(--muted);
+}
+
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:15px 32px;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:white;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 20px 40px rgba(79,70,229,.35);
+}
+
+/* FEATURE BOX */
+.hero-card{
+  background:var(--card);
+  padding:40px;
+  border-radius:var(--radius);
+  box-shadow:0 20px 50px rgba(0,0,0,.08);
+  animation:float 6s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
+
+.hero-card h3{
+  margin-bottom:10px;
+}
+
+.hero-card p{
+  color:var(--muted);
+}
+
+/* SECTION TITLES */
+.section-title{
+  text-align:center;
+  font-size:40px;
+  font-weight:800;
+  margin-bottom:60px;
+}
+
+/* SERVICES */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:var(--card);
+  padding:40px;
+  border-radius:var(--radius);
+  transition:.35s;
+  box-shadow:0 15px 35px rgba(0,0,0,.06);
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 30px 60px rgba(0,0,0,.1);
+}
+
+.card h3{
+  margin-bottom:12px;
+}
+
+.card p{
+  color:var(--muted);
+}
+
+/* TEAM */
+.team{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.member{
+  background:var(--card);
+  padding:45px;
+  border-radius:var(--radius);
+  text-align:center;
+  transition:.3s;
+}
+
+.member:hover{
+  transform:translateY(-8px);
+}
+
+.avatar{
+  width:90px;
+  height:90px;
+  margin:auto;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  margin-bottom:20px;
+}
+
+.member h3{
+  margin-bottom:4px;
+}
+
+.member span{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.member p{
+  margin-top:15px;
+  color:var(--muted);
+}
+
+/* CTA */
+.cta{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:white;
+  border-radius:24px;
+  padding:80px 30px;
+  text-align:center;
+}
+
+.cta h2{
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.cta p{
+  opacity:.9;
+  margin-bottom:30px;
+}
+
+.cta .btn{
+  background:white;
+  color:var(--primary);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+  header{
+    flex-direction:column;
+    gap:20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="container">
+  <div class="logo">Hexa<span>code</span></div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#team">Équipe</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="container hero">
+  <div>
+    <h1>Nous transformons vos idées<br>en <span>sites web modernes</span></h1>
+    <p>
+      Hexacode est une équipe de deux jeunes entrepreneurs passionnés.
+      Nous développons rapidement des projets simples ou complexes,
+      avec un design propre et des prix accessibles.
+    </p>
+    <a href="#contact" class="btn">Lancer un projet</a>
+  </div>
+
+  <div class="hero-card">
+    <h3>⚡ Rapide & efficace</h3>
+    <p>Du concept au site final en un temps record, sans sacrifier la qualité.</p>
+  </div>
+</section>
+
+<section id="services" class="container">
+  <h2 class="section-title">Ce que nous faisons</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Sites vitrines</h3>
+      <p>Idéal pour présenter votre activité avec crédibilité.</p>
+    </div>
+    <div class="card">
+      <h3>Projets complexes</h3>
+      <p>Fonctionnalités sur mesure, logique avancée et structure propre.</p>
+    </div>
+    <div class="card">
+      <h3>Design moderne</h3>
+      <p>Interfaces actuelles, animations fluides et responsive.</p>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="container">
+  <h2 class="section-title">L’équipe</h2>
+  <div class="team">
+    <div class="member">
+      <div class="avatar"></div>
+      <h3>Bogdan</h3>
+      <span>Développeur Web</span>
+      <p>Passionné par le code, l’optimisation et les projets ambitieux.</p>
+    </div>
+    <div class="member">
+      <div class="avatar"></div>
+      <h3>Louis</h3>
+      <span>Développeur Web</span>
+      <p>Créatif, rigoureux et orienté résultats.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="container">
+  <div class="cta">
+    <h2>Un projet ? Parlons-en.</h2>
+    <p>Nous répondons vite et livrons encore plus vite.</p>
+    <a href="#" class="btn">Nous contacter</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Hexacode — Tous droits réservés
+</footer>
+
+</body>
+</html>
