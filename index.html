@@ -9,6 +9,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
 
 <style>
+form input, form textarea{
+  width:100%;
+  padding:14px;
+  margin-bottom:15px;
+  border-radius:12px;
+  border:none;
+  outline:none;
+  font-size:15px;
+}
+
+form button{
+  width:100%;
+  padding:16px;
+  border-radius:14px;
+  border:none;
+  background:#020617;
+  color:white;
+  font-weight:700;
+  cursor:pointer;
+  transition:.3s;
+}
+
+form button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 15px 40px rgba(0,0,0,.3);
+}
 :root{
   --bg:#0b0f1a;
   --card:rgba(255,255,255,0.08);
@@ -305,8 +331,18 @@ footer{
 <section id="contact" class="container">
   <div class="contact">
     <h2>Nous contacter</h2>
+
     <p>📞 +32 474 22 29 26</p>
     <p>📧 peltieralois@icloud.com</p>
+
+    <form action="mailto:peltieralois@icloud.com" method="post" enctype="text/plain" style="margin-top:40px;max-width:500px;margin-left:auto;margin-right:auto;">
+      
+      <input type="text" name="Nom" placeholder="Votre nom" required>
+      <input type="email" name="Email" placeholder="Votre email" required>
+      <textarea name="Message" placeholder="Votre message" rows="5" required></textarea>
+      
+      <button type="submit">Envoyer le message</button>
+    </form>
   </div>
 </section>
 
