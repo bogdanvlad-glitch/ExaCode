@@ -24,7 +24,7 @@ body{
   line-height:1.8;
 }
 
-/* CONTAINER GLOBAL */
+/* CONTAINER */
 
 .container{
   max-width:1200px;
@@ -42,17 +42,19 @@ header{
   padding-bottom:40px;
 }
 
+/* LOGO FIX */
+
 .logo{
   display:flex;
   align-items:center;
-  gap:16px;
+  gap:18px;
 }
 
 .logo img{
-  width:48px;
-  height:48px;
-  border-radius:14px;
-  box-shadow:0 12px 30px rgba(99,102,241,.45);
+  width:46px;
+  height:46px;
+  object-fit:contain;
+  border-radius:12px;
 }
 
 .logo span{
@@ -81,25 +83,30 @@ nav a:hover{color:white}
   text-align:center;
 }
 
-.hero h1{
-  font-size:64px;
+/* HERO TITLE NEW */
+
+.hero-title{
+  font-size:68px;
   font-weight:900;
   line-height:1.1;
+  margin-bottom:40px;
 }
+
+.hero-title span{
+  background:linear-gradient(135deg,#6366f1,#22d3ee);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  display:block;
+  margin-top:10px;
+}
+
+/* HERO TEXT */
 
 .hero p{
-  font-size:18px;
-  color:var(--muted);
-  max-width:720px;
-}
-
-/* TITRES */
-
-.section-title{
   text-align:center;
-  font-size:46px;
-  font-weight:900;
-  margin-bottom:120px;
+  max-width:720px;
+  margin:20px auto;
+  line-height:1.9;
 }
 
 /* BUTTON */
@@ -113,6 +120,7 @@ nav a:hover{color:white}
   color:#020617;
   font-weight:700;
   text-decoration:none;
+  transition:.3s;
 }
 
 .btn:hover{
@@ -131,6 +139,15 @@ nav a:hover{color:white}
   box-shadow:0 40px 80px rgba(0,0,0,.4);
 }
 
+/* TITRES */
+
+.section-title{
+  text-align:center;
+  font-size:46px;
+  font-weight:900;
+  margin-bottom:120px;
+}
+
 /* GRID */
 
 .grid{
@@ -138,57 +155,26 @@ nav a:hover{color:white}
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:70px;
   margin-top:90px;
+  justify-items:center;
 }
 
-/* CARD */
+/* CARD HOVER NEW */
 
 .card{
   background:var(--card);
   border:1px solid var(--border);
   border-radius:26px;
   padding:70px;
+  text-align:left;
+  width:100%;
+  max-width:420px;
+  transition:0.3s;
 }
 
 .card:hover{
-  transform:translateY(-10px);
-  background:rgba(255,255,255,0.15);
-}
-
-/* CONTACT */
-
-.contact{
-  background:linear-gradient(135deg,var(--primary),var(--secondary));
-  border-radius:36px;
-  padding:140px 40px;
-  text-align:center;
-  color:#020617;
-}
-
-/* FORM */
-
-form{
-  margin-top:50px;
-  max-width:520px;
-  margin-left:auto;
-  margin-right:auto;
-}
-
-form input, form textarea{
-  width:100%;
-  padding:18px;
-  margin-bottom:20px;
-  border-radius:16px;
-  border:none;
-}
-
-form button{
-  width:100%;
-  padding:20px;
-  border-radius:18px;
-  border:none;
-  background:#020617;
-  color:white;
-  font-weight:700;
+  transform:translateY(-10px) scale(1.02);
+  background:rgba(255,255,255,0.14);
+  box-shadow:0 30px 60px rgba(0,0,0,0.35);
 }
 
 /* FOOTER */
@@ -198,37 +184,5 @@ footer{
   padding:120px 20px;
   color:var(--muted);
   margin-top:160px;
-}
-
-
-/* ===== CORRECTIONS ALIGNEMENTS ===== */
-
-/* Hero texte lisible et droit */
-.hero p{
-  text-align:center;
-  max-width:680px;
-  margin-left:auto;
-  margin-right:auto;
-  line-height:1.9;
-}
-
-/* Cartes alignées à gauche */
-.card{
-  text-align:left;
-}
-
-/* Espacement titre carte */
-.card h3{
-  margin-bottom:16px;
-}
-
-/* Dernière ligne de cartes centrée */
-.grid{
-  justify-items:center;
-}
-
-.card{
-  width:100%;
-  max-width:420px;
 }
 
