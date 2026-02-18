@@ -201,4 +201,34 @@ footer{
 }
 
 
+/* ===== CORRECTIONS ALIGNEMENTS ===== */
+
+/* Hero texte lisible et droit */
+.hero p{
+  text-align:center;
+  max-width:680px;
+  margin-left:auto;
+  margin-right:auto;
+  line-height:1.9;
+}
+
+/* Cartes alignées à gauche */
+.card{
+  text-align:left;
+}
+
+/* Espacement titre carte */
+.card h3{
+  margin-bottom:16px;
+}
+
+/* Dernière ligne de cartes centrée */
+.grid{
+  justify-items:center;
+}
+
+.card{
+  width:100%;
+  max-width:420px;
+}
 
