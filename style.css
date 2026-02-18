@@ -137,3 +137,64 @@ label {
   color: #aaa;
   font-size: 14px;
 }
+/* ===== GLOBAL DEPTH ===== */
+
+body::before {
+  content:"";
+  position:fixed;
+  inset:0;
+  background: radial-gradient(circle at 20% 10%, rgba(90,90,255,0.12), transparent 40%),
+              radial-gradient(circle at 80% 90%, rgba(140,0,255,0.12), transparent 40%);
+  z-index:-1;
+  animation: bgMove 18s linear infinite;
+}
+
+@keyframes bgMove {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-40px); }
+  100% { transform: translateY(0); }
+}
+
+/* ===== HERO TITLE GLOW ===== */
+
+.hero h1 {
+  background: linear-gradient(90deg, #ffffff, #b8b8ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(120,120,255,0.25);
+}
+
+/* ===== CARDS PREMIUM ===== */
+
+.card {
+  position:relative;
+  overflow:hidden;
+}
+
+.card::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:14px;
+  background: linear-gradient(120deg, transparent, rgba(100,100,255,0.25), transparent);
+  opacity:0;
+  transition:0.4s;
+}
+
+.card:hover::before {
+  opacity:1;
+}
+
+/* ===== SECTION LIGHT ===== */
+
+section {
+  position:relative;
+}
+
+section::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background: radial-gradient(circle at center, rgba(80,80,255,0.05), transparent 70%);
+  pointer-events:none;
+}
