@@ -3,23 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <title>Contact - ExaCode</title>
-<link rel="icon" href="favicon.ico">
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <img src="logo.svg" alt="ExaCode">
+<header class="container">
+  <div class="logo">
+    <img src="logo.svg">
+    <span>ExaCode</span>
+  </div>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="work.html">Work</a>
   </nav>
 </header>
 
-<section>
+<section class="container">
 
-<h1>Start a Collaboration</h1>
+<div class="contact">
+
+<h2>Start a Collaboration</h2>
 
 <p>
 We collaborate with founders, startups and technical teams seeking
@@ -27,25 +32,13 @@ high-precision digital engineering.
 Every inquiry is reviewed within 24 hours.
 </p>
 
-<p>
-Project scope, timelines and technical constraints can be discussed
-during an initial discovery call.
-</p>
+<form action="https://formspree.io/f/xwvnqoea" method="POST">
 
-<div class="card">
+<input type="text" name="name" placeholder="Name" required>
+<input type="email" name="email" placeholder="Email" required>
+<textarea name="message" rows="5" placeholder="Project details" required></textarea>
 
-<form action="https://formspree.io/f/TON_ID_ICI" method="POST">
-
-<label>Name</label>
-<input type="text" name="name" required>
-
-<label>Email</label>
-<input type="email" name="email" required>
-
-<label>Project Details</label>
-<textarea name="message" rows="5" required></textarea>
-
-<button class="btn" type="submit">Send Message</button>
+<button type="submit">Send Message</button>
 
 </form>
 
@@ -54,10 +47,10 @@ during an initial discovery call.
 </section>
 
 <footer>
-ExaCode © 2026<br>
-Independent Engineering Studio — Performance Driven Digital Systems
+© 2026 ExaCode — All rights reserved
 </footer>
 
 </body>
 </html>
+
 
