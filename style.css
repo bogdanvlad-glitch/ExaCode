@@ -114,3 +114,26 @@ footer{
   color:#777;
 }
 
+/* ===== CONTACT FORM ===== */
+
+input, textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #222;
+  background: #0d0d15;
+  color: white;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #6b6bff;
+  box-shadow: 0 0 8px rgba(107,107,255,0.3);
+}
+
+label {
+  color: #aaa;
+  font-size: 14px;
+}
