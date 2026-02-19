@@ -233,3 +233,73 @@ form button:hover{
   transform:translateY(-3px);
   box-shadow:0 15px 40px rgba(0,0,0,0.25);
 }
+
+/* ===== CONTACT STYLE NEW ===== */
+
+.contact-box{
+  max-width:1000px;
+  margin:auto;
+  padding:80px 60px;
+  border-radius:34px;
+
+  background:linear-gradient(135deg,#6366f1,#22d3ee);
+  text-align:center;
+  color:#020617;
+
+  box-shadow:0 40px 80px rgba(0,0,0,0.35);
+}
+
+.contact-box h2{
+  font-size:56px;
+  font-weight:900;
+  margin-bottom:20px;
+}
+
+.contact-box p{
+  font-size:28px;
+  font-weight:600;
+  margin-bottom:10px;
+}
+
+/* FORM */
+
+.contact-box form{
+  margin-top:45px;
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.contact-box input,
+.contact-box textarea{
+  width:100%;
+  padding:18px;
+  margin-bottom:16px;
+  border:none;
+  border-radius:14px;
+  font-size:16px;
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus{
+  outline:none;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.contact-box button{
+  width:100%;
+  padding:18px;
+  border:none;
+  border-radius:14px;
+  background:#020617;
+  color:white;
+  font-weight:700;
+  font-size:16px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.contact-box button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.3);
+}
