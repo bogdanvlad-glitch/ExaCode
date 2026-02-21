@@ -42,7 +42,7 @@ header{
   padding-bottom:40px;
 }
 
-/* LOGO FIX */
+/* LOGO */
 
 .logo{
   display:flex;
@@ -71,7 +71,9 @@ nav a{
   text-decoration:none;
 }
 
-nav a:hover{color:white}
+nav a:hover{
+  color:white;
+}
 
 /* HERO */
 
@@ -82,8 +84,6 @@ nav a:hover{color:white}
   align-items:center;
   text-align:center;
 }
-
-/* HERO TITLE NEW */
 
 .hero-title{
   font-size:68px;
@@ -99,8 +99,6 @@ nav a:hover{color:white}
   display:block;
   margin-top:10px;
 }
-
-/* HERO TEXT */
 
 .hero p{
   text-align:center;
@@ -148,17 +146,25 @@ nav a:hover{color:white}
   margin-bottom:120px;
 }
 
-/* GRID */
+/* ================= GRID CORRIGÉE ================= */
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  grid-template-columns:repeat(6, 1fr);
   gap:70px;
   margin-top:90px;
-  justify-items:center;
 }
 
-/* CARD HOVER NEW */
+/* Ligne 1 */
+.grid .card:nth-child(1){ grid-column:1 / span 2; }
+.grid .card:nth-child(2){ grid-column:3 / span 2; }
+.grid .card:nth-child(3){ grid-column:5 / span 2; }
+
+/* Ligne 2 centrée parfaitement */
+.grid .card:nth-child(4){ grid-column:2 / span 2; }
+.grid .card:nth-child(5){ grid-column:4 / span 2; }
+
+/* CARD */
 
 .card{
   background:var(--card);
@@ -167,7 +173,6 @@ nav a:hover{color:white}
   padding:70px;
   text-align:left;
   width:100%;
-  max-width:420px;
   transition:0.3s;
 }
 
@@ -186,104 +191,50 @@ footer{
   margin-top:160px;
 }
 
-/* ===== CONTACT PAGE IMPROVED ===== */
-
-.contact{
-  max-width:900px;
-  margin:auto;
-  text-align:center;
-}
-
-form{
-  margin-top:40px;
-}
-
-form input,
-form textarea{
-  background:white;
-  color:#020617;
-  font-size:16px;
-  padding:18px;
-  border-radius:14px;
-  border:none;
-  transition:0.25s;
-}
-
-form input:focus,
-form textarea:focus{
-  outline:none;
-  transform:scale(1.01);
-  box-shadow:0 8px 25px rgba(0,0,0,0.15);
-}
-
-form button{
-  margin-top:10px;
-  padding:18px;
-  font-size:16px;
-  border-radius:14px;
-  border:none;
-  background:#020617;
-  color:white;
-  font-weight:700;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-form button:hover{
-  transform:translateY(-3px);
-  box-shadow:0 15px 40px rgba(0,0,0,0.25);
-}
-
-/* ===== CONTACT STYLE NEW ===== */
+/* ================= CONTACT PAGE ================= */
 
 .contact-box{
   max-width:1000px;
-  margin:auto;
-  padding:80px 60px;
-  border-radius:34px;
-
+  margin:120px auto;
+  padding:100px 60px;
+  border-radius:30px;
   background:linear-gradient(135deg,#6366f1,#22d3ee);
   text-align:center;
   color:#020617;
-
-  box-shadow:0 40px 80px rgba(0,0,0,0.35);
+  box-shadow:0 40px 80px rgba(0,0,0,.35);
 }
 
 .contact-box h2{
-  font-size:56px;
+  font-size:48px;
   font-weight:900;
   margin-bottom:20px;
 }
 
 .contact-box p{
-  font-size:28px;
-  font-weight:600;
-  margin-bottom:10px;
+  font-size:18px;
+  margin-bottom:40px;
+  font-weight:500;
 }
 
-/* FORM */
-
 .contact-box form{
-  margin-top:45px;
   max-width:600px;
-  margin-left:auto;
-  margin-right:auto;
+  margin:0 auto;
 }
 
 .contact-box input,
 .contact-box textarea{
   width:100%;
   padding:18px;
-  margin-bottom:16px;
-  border:none;
+  margin-bottom:18px;
   border-radius:14px;
+  border:none;
   font-size:16px;
+  outline:none;
 }
 
 .contact-box input:focus,
 .contact-box textarea:focus{
-  outline:none;
-  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  box-shadow:0 10px 30px rgba(0,0,0,0.25);
 }
 
 .contact-box button{
@@ -300,24 +251,6 @@ form button:hover{
 }
 
 .contact-box button:hover{
-  transform:translateY(-3px);
-  box-shadow:0 15px 35px rgba(0,0,0,0.3);
+  transform:translateY(-4px);
+  box-shadow:0 20px 50px rgba(0,0,0,0.35);
 }
-
-/* --- Centre les 2 dernières cartes dans la grille Nos domaines --- */
-
-section .grid .card:nth-child(4){
-  grid-column:2;
-}
-
-section .grid .card:nth-child(5){
-  grid-column:3;
-}
-
-/* Centre parfaitement les 2 dernières cartes */
-
-.grid .card:nth-child(4),
-.grid .card:nth-child(5) {
-  justify-self: center;
-}
-
