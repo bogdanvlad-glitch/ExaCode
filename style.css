@@ -304,20 +304,13 @@ form button:hover{
   box-shadow:0 15px 35px rgba(0,0,0,0.3);
 }
 
-/* --- Centre proprement les 2 dernières cartes --- */
+/* --- Centre les 2 dernières cartes dans la grille Nos domaines --- */
 
-.services {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+section .grid .card:nth-child(4){
+  grid-column:2;
 }
 
-/* Carte 4 */
-.services .card:nth-child(4) {
-  grid-column: 2;
+section .grid .card:nth-child(5){
+  grid-column:3;
 }
 
-/* Carte 5 */
-.services .card:nth-child(5) {
-  grid-column: 3;
-}
