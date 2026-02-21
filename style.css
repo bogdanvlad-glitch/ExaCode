@@ -314,3 +314,9 @@ section .grid .card:nth-child(5){
   grid-column:3;
 }
 
+/* Centre parfaitement les 2 dernières cartes */
+
+.grid .card:nth-child(4),
+.grid .card:nth-child(5) {
+  justify-self: center;
+}
