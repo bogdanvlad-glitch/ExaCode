@@ -198,7 +198,7 @@ nav a:hover{
 }
 
 .card-icon img{
-  width:90px;   /* taille idéale pour ton design */
+  width:130px;   /* taille idéale pour ton design */
   height:auto;
   object-fit:contain;
   transition:0.3s ease;
