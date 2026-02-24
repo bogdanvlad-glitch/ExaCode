@@ -179,7 +179,7 @@ nav a:hover{
   align-items:center;
   text-align:center;
 
-  transition:0.3s ease;
+  justify-content:space-between;   /* 🔥 IMPORTANT */
 }
 
 .card:hover{
@@ -214,9 +214,6 @@ nav a:hover{
   margin-bottom:15px;
   font-size:20px;
   min-height:60px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
 }
 
 .card p{
